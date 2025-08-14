@@ -1,22 +1,90 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+int main(){
+    // cada uma das variáveis estão seguindo a regra de cada carta onde 1 é para a primeira e 2 para a segunda
+    char estado1, estado2, cartacode1[4], cartacode2[4], cidade1[25], cidade2[25];
+    int populacao1, populacao2, turismo1, turismo2; 
+    float area1, area2, PIB1, PIB2;
 
-int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    printf("Bem vindo ao sistema de cadastro de cartas para o jogo Super Trunfo de Países\n");
 
-    return 0;
+    // inicio de input das informações
+    printf("Informações a seguir são para a primeira carta.\n");
+
+    printf("Digite a primeira letra entre 'A' a 'H': "); 
+    scanf(" %c", &estado1);
+    
+    printf("Digite a letra do estado e um número de 01 a 04 (ex: A01, B03): ");
+    scanf("%s", cartacode1);
+
+    printf("Digite o nome da cidade Sem espaços (Ex: SãoPaulo ou São_Paulo): ");
+    scanf("%s", cidade1);
+
+    printf("Digite a população da cidade: ");
+    scanf("%d", &populacao1);
+
+    printf("Digite a área da cidade em quilômetros quadrados: ");
+    scanf("%f", &area1);
+
+    printf("Digite o PIB (Produto Interno Bruto) da cidade: ");
+    scanf("%f", &PIB1);
+
+    printf("Digite quantos pontos turísticos a cidade possui: ");
+    scanf("%d", &turismo1);
+
+    // resultado das informações para a primeira carta
+    printf("\n=============== Carta: 1 ===============\n");
+    printf("Carta 1: \n");
+    printf("Estado: %c \n", estado1);
+    printf("Código: %s \n", cartacode1);
+    printf("Nome da Cidade: %s \n", cidade1);
+    printf("População: %d \n", populacao1);
+    printf("Área: %.2f Km² \n", area1);
+    printf("PIB: %.2f bilhões de reais \n", PIB1);
+    printf("Número de Pontos Turísticos: %d \n", turismo1);
+    printf("======================================\n");
+
+    printf("Cadastro da primeira carta concluído!\n"); //confirmação visual para o usuário
+
+    // inicio de input das informações para a segunda carta
+    printf("Informações a seguir são para a segunda carta.\n");
+
+    printf("Digite a primeira letra entre 'A' a 'H': "); 
+    scanf(" %c", &estado2);
+    
+    printf("Digite a letra do estado e um número de 01 a 04 (ex: A01, B03): ");
+    scanf("%s", cartacode2);
+
+    printf("Digite o nome da cidade Sem espaços (Ex: SãoPaulo ou São_Paulo): ");
+    scanf("%s", cidade2);
+
+    printf("Digite a população da cidade: ");
+    scanf("%d", &populacao2);
+
+    printf("Digite a área da cidade em quilômetros quadrados: ");
+    scanf("%f", &area2);
+
+    printf("Digite o PIB (Produto Interno Bruto) da cidade: ");
+    scanf("%f", &PIB2);
+
+    printf("Digite quantos pontos turísticos a cidade possui: ");
+    scanf("%d", &turismo2);
+
+    // resultado das informações para a segunda carta
+    printf("\n=============== Carta: 2 ===============\n");
+    printf("Carta 2: \n");
+    printf("Estado: %c \n", estado2);
+    printf("Código: %s \n", cartacode2);
+    printf("Nome da Cidade: %s \n", cidade2);
+    printf("População: %d \n", populacao2);
+    printf("Área: %.2f Km² \n", area2);
+    printf("PIB: %.2f bilhões de reais \n", PIB2);
+    printf("Número de Pontos Turísticos: %d \n", turismo2);
+    printf("======================================\n");
+
+    printf("Cadastro da segunda carta concluído!\n");   //confirmação visual para o usuário
+    
+    printf("\nCartas cadastradas! Boa sorte no jogo!\n");   // Mensagem de encerramento
+
+    return 0;    
 }
