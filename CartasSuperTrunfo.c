@@ -4,7 +4,7 @@ int main(){
     // cada uma das variáveis estão seguindo a regra de cada carta onde 1 é para a primeira e 2 para a segunda
     char estado1, estado2, cartacode1[4], cartacode2[4], cidade1[25], cidade2[25];
     int populacao1, populacao2, turismo1, turismo2; 
-    float area1, area2, PIB1, PIB2;
+    float area1, area2, PIB1, PIB2, dencidade1, dencidade2, PIBper1, PIBper2;
 
     printf("Bem vindo ao sistema de cadastro de cartas para o jogo Super Trunfo de Países\n");
 
@@ -32,17 +32,9 @@ int main(){
     printf("Digite quantos pontos turísticos a cidade possui: ");
     scanf("%d", &turismo1);
 
-    // resultado das informações para a primeira carta
-    printf("\n=============== Carta: 1 ===============\n");
-    printf("Carta 1: \n");
-    printf("Estado: %c \n", estado1);
-    printf("Código: %s \n", cartacode1);
-    printf("Nome da Cidade: %s \n", cidade1);
-    printf("População: %d \n", populacao1);
-    printf("Área: %.2f Km² \n", area1);
-    printf("PIB: %.2f bilhões de reais \n", PIB1);
-    printf("Número de Pontos Turísticos: %d \n", turismo1);
-    printf("======================================\n");
+    // Calculos para carta 1
+    dencidade1 = (float)populacao1 / area1;  // calculo para dencidade
+    PIBper1 = (PIB1 * 1000000000.0) / (float)populacao1;    //calculo para PIB per capita
 
     printf("Cadastro da primeira carta concluído!\n"); //confirmação visual para o usuário
 
@@ -70,6 +62,28 @@ int main(){
     printf("Digite quantos pontos turísticos a cidade possui: ");
     scanf("%d", &turismo2);
 
+    // Calculos para carta 2
+    dencidade2 = (float)populacao2 / area2; // calculo para dencidade
+    PIBper2 = (PIB2 * 1000000000.0) / (float) populacao2;   //calculo para PIB per capita
+
+    printf("Cadastro da segunda carta concluído!\n");   //confirmação visual para o usuário
+
+    // exibi as cartas para melhor visualização do usuario
+
+    // resultado das informações para a primeira carta
+    printf("\n=============== Carta: 1 ===============\n");
+    printf("Carta 1: \n");
+    printf("Estado: %c \n", estado1);
+    printf("Código: %s \n", cartacode1);
+    printf("Nome da Cidade: %s \n", cidade1);
+    printf("População: %d \n", populacao1);
+    printf("Área: %.2f Km² \n", area1);
+    printf("PIB: %.2f bilhões de reais \n", PIB1);
+    printf("Número de Pontos Turísticos: %d \n", turismo1);
+    printf("Densidade Populacional: %.2f hab/Km² \n", dencidade1);
+    printf("PIB per Capita: %.2f reais \n", PIBper1);
+    printf("======================================\n");
+
     // resultado das informações para a segunda carta
     printf("\n=============== Carta: 2 ===============\n");
     printf("Carta 2: \n");
@@ -80,9 +94,9 @@ int main(){
     printf("Área: %.2f Km² \n", area2);
     printf("PIB: %.2f bilhões de reais \n", PIB2);
     printf("Número de Pontos Turísticos: %d \n", turismo2);
+    printf("Densidade Populacional: %.2f hab/Km²\n", dencidade2);
+    printf("PIB per Capita: %.2f reais\n", PIBper2);
     printf("======================================\n");
-
-    printf("Cadastro da segunda carta concluído!\n");   //confirmação visual para o usuário
     
     printf("\nCartas cadastradas! Boa sorte no jogo!\n");   // Mensagem de encerramento
 
